@@ -61,11 +61,11 @@ optional arguments:
 
 If the input is `obama.jpg`:
 
-![obama](https://github.com/pranav-ust/posenet/blob/master/obama.jpg)
+<img src="https://github.com/pranav-ust/posenet/blob/master/obama.jpg" alt="obama" width="100" height="200">
 
 Output is:
 
-![obama with keypoints](https://github.com/pranav-ust/posenet/blob/master/output.jpg)
+<img src="https://github.com/pranav-ust/posenet/blob/master/output.jpg" alt="obama" width="100" height="200">
 
 ## Credits
 
