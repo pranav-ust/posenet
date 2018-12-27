@@ -16,7 +16,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-from tqdm import tqdm
+import argparse
 
 cudnn.benchmark = config.CUDNN.BENCHMARK
 torch.backends.cudnn.deterministic = config.CUDNN.DETERMINISTIC
@@ -117,9 +117,14 @@ def draw(image, points, probs, res, threshold):
             cv2.circle(image, rounded[i], res, (255, 0, 0), thickness=-1, lineType=cv2.FILLED)
 
 
-for i in tqdm(range(6273)):
-    filename = "frame-" + str(i) + ".jpg"
-    keypoints, probs = get_keypoints("images/" + filename)
-    image = cv2.imread("images/" + filename)
-    draw(image, keypoints, probs, 8, 0.1)
-    cv2.imwrite("output/" + filename, image)
+parser = argparse.ArgumentParser()
+parser.add_argument("image", help = "the image that you want to input")
+parser.add_argument("--output", help = "the output filename", default = "output.jpg")
+parser.add_argument("--threshold", help = "probability of the keypoint that should appear greater than this threshold", type = int, default = 0.1)
+parser.add_argument("--thickness", help = "thickness of the line", type = int, default = 8)
+args = parser.parse_args()
+filename = args.image
+keypoints, probs = get_keypoints(filename)
+image = cv2.imread(filename)
+draw(image, keypoints, probs, args.thickness, args.threshold)
+cv2.imwrite(args.output, image)
