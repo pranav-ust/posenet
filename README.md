@@ -1,12 +1,15 @@
 # Pose Net
 
-Simplified version of ECCV paper (Simple Baselines for Human Pose Estimation and Tracking) which you can use that for your custom files! Extremely fast and easy to use.
+Simplified version of ECCV paper (Simple Baselines for Human Pose Estimation and Tracking) which you can use that for your custom files. Extremely fast and easy to use.
 
 ## Requirements
 
 Python 3.5+
+
 Pytorch >= 0.40
+
 OpenCV 4.0
+
 CuDA
 
 ## Usage
