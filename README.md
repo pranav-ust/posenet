@@ -61,11 +61,11 @@ optional arguments:
 
 If the input is `obama.jpg`:
 
-<img src="https://github.com/pranav-ust/posenet/blob/master/obama.jpg" alt="obama" width="100" height="200">
+<img src="https://github.com/pranav-ust/posenet/blob/master/obama.jpg" alt="obama" width="537.4" height="672.8">
 
 Output is:
 
-<img src="https://github.com/pranav-ust/posenet/blob/master/output.jpg" alt="obama" width="100" height="200">
+<img src="https://github.com/pranav-ust/posenet/blob/master/output.jpg" alt="obama" width="537.4" height="672.8">
 
 ## Credits
 
